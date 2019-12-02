@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
@@ -14,8 +15,6 @@ import androidx.fragment.app.DialogFragment;
 import com.example.pinplay.R;
 
 public class UserFragment extends DialogFragment implements View.OnClickListener {
-
-    private EditText mEditText;
 
     public UserFragment() {
         // Empty constructor is required for DialogFragment
@@ -35,6 +34,7 @@ public class UserFragment extends DialogFragment implements View.OnClickListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_user, container);
+        ((TextView) v.findViewById(R.id.lbl_your_name)).setText(getArguments().getString("title"));
         Button b = (Button) v.findViewById(R.id.button2);
         b.setOnClickListener(this);
         return v;

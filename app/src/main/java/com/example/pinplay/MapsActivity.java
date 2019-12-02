@@ -51,8 +51,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void createMarkers() {
-        createMarker("Sydney", R.mipmap.memoji_foreground, 38.987327, -76.944886);
-        createMarker("Sydney2", R.mipmap.memoji_foreground, 38.985782, -76.944423);
+        createMarker("Just Chilling Until My Next Class (6:30)", R.mipmap.memoji_foreground, 38.987327, -76.944886);
+        createMarker("Straight Booling (5:30)", R.mipmap.memoji_foreground, 38.985782, -76.944423);
     }
 
     private void setUpCamera() {
@@ -75,7 +75,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
     public boolean onMarkerClick(final Marker marker) {
         currentMarker = marker;
-        DialogFragment newFragment = UserFragment.newInstance("Title");
+        DialogFragment newFragment = UserFragment.newInstance(marker.getTitle());
         newFragment.show(this.getSupportFragmentManager(), "dialog");
         return true;
     }
