@@ -1,4 +1,4 @@
-package com.example.pinpoint;
+package com.example.pinplay;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.pinpoint;
+package com.example.pinplay;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.example.pinpoint", appContext.getPackageName());
+        assertEquals("com.example.pinplay", appContext.getPackageName());
     }
 }
