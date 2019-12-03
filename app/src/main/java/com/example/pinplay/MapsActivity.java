@@ -51,8 +51,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void createMarkers() {
-        createMarker("Just Chilling Until My Next Class (6:30)", R.mipmap.memoji_foreground, 38.987327, -76.944886);
-        createMarker("Straight Booling (5:30)", R.mipmap.memoji_foreground, 38.985782, -76.944423);
+        createMarker("Rebekah\nJust Chilling Until My Next Class\n6:30", R.mipmap.memoji_foreground, 38.987327, -76.944886);
+        createMarker("Ali\nStraight Booling\n5:30", R.mipmap.test_foreground, 38.985782, -76.944423);
     }
 
     private void setUpCamera() {
