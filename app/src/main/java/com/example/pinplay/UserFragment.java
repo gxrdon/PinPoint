@@ -1,5 +1,7 @@
 package com.example.pinplay;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -36,6 +38,7 @@ public class UserFragment extends DialogFragment implements View.OnClickListener
         View v = inflater.inflate(R.layout.fragment_user, container);
         ((TextView) v.findViewById(R.id.lbl_your_name)).setText(getArguments().getString("title"));
         Button b = (Button) v.findViewById(R.id.button2);
+        ((Button) v.findViewById(R.id.button3)).setOnClickListener(this);
         b.setOnClickListener(this);
         return v;
     }
@@ -47,6 +50,10 @@ public class UserFragment extends DialogFragment implements View.OnClickListener
             case R.id.button2:
                 MapsActivity.hideMarker();
                 this.dismiss();
+            case R.id.button3:
+                Intent sendIntent = new Intent(Intent.ACTION_VIEW);
+                sendIntent.setData(Uri.parse("sms:"));
+                startActivity(sendIntent);
         }
     }
 }
