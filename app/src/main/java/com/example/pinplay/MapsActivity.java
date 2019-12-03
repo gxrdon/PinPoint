@@ -51,8 +51,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     private void createMarkers() {
-        createMarker("Rebekah\nJust Chilling Until My Next Class\n6:30", R.mipmap.memoji_foreground, 38.987327, -76.944886);
-        createMarker("Ali\nStraight Booling\n5:30", R.mipmap.test_foreground, 38.985782, -76.944423);
+        createMarker("Rebekah\nJust Chilling Until My Next Class\n6:30-8:00", R.mipmap.memoji_foreground, 38.989654, -76.939940);
+        createMarker("CMSC434\nLet's work on GA6\n5:30-7:30", R.mipmap.thegang_foreground, 38.985823, -76.944997);
+        createMarker("Billy\nWho wants to boogie\n7-1:30am", R.mipmap.billy_foreground, 38.982838, -76.942960);
+        createMarker("Jamie\nGettin' some Sun\n7-1:30am", R.mipmap.jamie_foreground, 38.985907, -76.942123);
+        createMarker("Stephen\nIt's time to fill my belly\n5:30-7:45", R.mipmap.stephen_foreground, 38.989176, -76.936409);
+        createMarker("ARCH GANG\nPROJECT DUE\n2:00-11:00am", R.mipmap.arch_foreground, 38.984311, -76.947500);
+        createMarker("Ellie\nStudy???\n7:30-11:00", R.mipmap.ellie_foreground, 38.981370, -76.936125);
+        createMarker("Marathon Deli\nMonday Discount\nAll Day", R.mipmap.marathon_foreground, 38.981603, -76.938613);
+        createMarker("Vigilante\nLatte 50% off\nAfter 5", R.mipmap.vig_foreground, 38.991967, -76.933892);
+        createMarker("Chick Fil A\nCome Try Spicy Chicken\nAfter 5", R.mipmap.chick_foreground, 38.988103, -76.944616);
+
+
+
     }
 
     private void setUpCamera() {
