@@ -53,6 +53,7 @@ public class UserFragment extends DialogFragment implements View.OnClickListener
             case R.id.button3:
                 Intent sendIntent = new Intent(Intent.ACTION_VIEW);
                 sendIntent.setData(Uri.parse("sms:"));
+                sendIntent.putExtra("address", "12125551212");
                 startActivity(sendIntent);
         }
     }
