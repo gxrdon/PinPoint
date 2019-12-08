@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
@@ -35,7 +36,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mapFragment.getMapAsync(this);
         Button addPin = findViewById(R.id.pinButton);
-
         addPin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,6 +45,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
         });
+
+//        ImageView dragPin = findViewById(R.id.dragPin);
+//        dragPin.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public void onLongClick(View v) {
+//                FragmentTransaction ft = getFragmentManager().beginTransaction();
+//                DialogFragment newFragment = PinFragment.newInstance("test");
+//                newFragment.show(getSupportFragmentManager(), "dialog");
+//
+//            }
+//        });
     }
 
 

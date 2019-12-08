@@ -9,24 +9,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Event Title" />
+
     <EditText
-        android:id="@+id/pin_description"
+        android:id="@+id/pin_contacts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Description"
-        android:layout_below="@+id/pin_title"/>
+        android:layout_below="@+id/pin_title"
+        android:hint="Contacts" />
         //android:layout_alignParentStart="true"/>
     <EditText
         android:id="@+id/pin_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Time"
-        android:layout_below="@+id/pin_description"/>
+        android:layout_below="@+id/pin_contacts"/><![CDATA[
         //android:layout_alignParentStart="true"/>
+
+    ]]>
+
+    <EditText
+        android:id="@+id/pin_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pin_time"
+        android:hint="Location" />
+
     <Button
         android:id="@+id/addPinButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pin_time"
+        android:layout_below="@+id/pin_location"
+        android:layout_marginTop="32dp"
         android:text="Create Pin" />
 </RelativeLayout>

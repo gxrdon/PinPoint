@@ -65,7 +65,9 @@ public class PinFragment extends DialogFragment implements View.OnClickListener{
             case R.id.addPinButton:
                 EditText title   = (EditText)getView().findViewById(R.id.pin_title);
                 EditText time = (EditText)getView().findViewById(R.id.pin_time);
-                createMarker("Stephen\n"+ title.getText() +"\n" + time, R.mipmap.stephen_foreground, 38.989160, -76.936406);
+                EditText contacts = (EditText)getView().findViewById(R.id.pin_contacts);
+                EditText loc = (EditText)getView().findViewById(R.id.pin_location);
+                createMarker(title.getText() +"\n" + time, R.mipmap.stephen_foreground, 38.989160, -76.936406);
                 this.dismiss();
         }
     }

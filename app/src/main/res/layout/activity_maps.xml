@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MapsActivity">
+
         <Button
         android:id="@+id/pinButton"
         android:layout_width="wrap_content"
@@ -16,6 +17,17 @@
         android:padding="10dp"
         android:paddingRight="10dp"
         android:text="Add A Pin" />
+
+<!--    <ImageView android:id="@+id/dragPin"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="bottom|center"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:src="@drawable/ic_place_black_24dp" />-->
+
+
+
     </fragment>
 
 
