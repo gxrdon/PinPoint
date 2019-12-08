@@ -18,6 +18,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.Map;
+
 public class PinFragment extends DialogFragment implements View.OnClickListener{
 
     private GoogleMap mMap;
@@ -41,9 +43,9 @@ public class PinFragment extends DialogFragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_pin, container);
         //((TextView) v.findViewById(R.id.lbl_your_name)).setText(getArguments().getString("title"));
-        //Button b = (Button) v.findViewById(R.id.button2);
-        //((Button) v.findViewById(R.id.button3)).setOnClickListener(this);
-        //b.setOnClickListener(this);
+        Button b = (Button) v.findViewById(R.id.addPinButton);
+        ((Button) v.findViewById(R.id.addPinButton)).setOnClickListener(this);
+        b.setOnClickListener(this);
         return v;
     }
 
@@ -51,7 +53,7 @@ public class PinFragment extends DialogFragment implements View.OnClickListener{
         LatLng location = new LatLng(lat, lng);
         MarkerOptions markerOptions = new MarkerOptions().position(location).title(name)
                 .icon(BitmapDescriptorFactory.fromResource(resource));
-        Marker marker = mMap.addMarker(markerOptions);
+        Marker marker = MapsActivity.aMap.addMarker(markerOptions);
         return marker;
     }
 
@@ -64,7 +66,7 @@ public class PinFragment extends DialogFragment implements View.OnClickListener{
                 EditText title   = (EditText)getView().findViewById(R.id.pin_title);
                 EditText time = (EditText)getView().findViewById(R.id.pin_time);
                 createMarker("Stephen\n"+ title.getText() +"\n" + time, R.mipmap.stephen_foreground, 38.989160, -76.936406);
-                getActivity().getFragmentManager().popBackStack();
+                this.dismiss();
         }
     }
 }

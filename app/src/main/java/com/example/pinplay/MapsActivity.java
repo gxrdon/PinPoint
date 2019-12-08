@@ -23,6 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
     private GoogleMap mMap;
     private static Marker currentMarker;
+    public static GoogleMap aMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        aMap = googleMap;
         mMap.setOnMarkerClickListener(this);
 
         // creating each of the markers individually
@@ -72,7 +74,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         createMarker("CMSC434\nLet's work on GA6\n5:30-7:30", R.mipmap.thegang_foreground, 38.985823, -76.944997);
         createMarker("Billy\nWho wants to boogie\n7-1:30am", R.mipmap.billy_foreground, 38.982838, -76.942960);
         createMarker("Jamie\nGettin' some Sun\n7-1:30am", R.mipmap.jamie_foreground, 38.985907, -76.942123);
-        createMarker("Stephen\nIt's time to fill my belly\n5:30-7:45", R.mipmap.stephen_foreground, 38.989176, -76.936409);
+//        createMarker("Stephen\nIt's time to fill my belly\n5:30-7:45", R.mipmap.stephen_foreground, 38.989176, -76.936409);
         createMarker("ARCH GANG\nPROJECT DUE\n2:00-11:00am", R.mipmap.arch_foreground, 38.984311, -76.947500);
         createMarker("Ellie\nStudy???\n7:30-11:00", R.mipmap.ellie_foreground, 38.981370, -76.936125);
         createMarker("Marathon Deli\nMonday Discount\nAll Day", R.mipmap.marathon_foreground, 38.981603, -76.938613);
